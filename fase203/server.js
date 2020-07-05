@@ -15,6 +15,10 @@ server.get("/", function(req, res){
     return res.render("about");
 });
 
+server.get("/cursos", function(req, res){
+    return res.render("cursos");
+});
+
 server.get("/aulas", function(req, res){
     return res.render("aulas");
 });

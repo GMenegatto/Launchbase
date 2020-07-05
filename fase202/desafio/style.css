@@ -3,6 +3,7 @@
 :root {
     --color-green: #50fa7b;
     --color-rocket: #7159c1;
+    --color-org: rgb(253, 149, 31);
 }
 
 * {
@@ -13,13 +14,17 @@
 
 body {
     background: #0F0D11;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
+
 }
 
 header {
     padding: 32px;
-    background: #0B0A0D;
+    background: #0F0D11;
 }
 
 .links {
@@ -156,4 +161,126 @@ iframe {
     height:90%;
     position: absolute;
     top: 5%;
+}
+
+/* CURSOS */
+
+.cursos{
+    max-width: max-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+}
+
+.curso{
+    max-width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url(img/FeaturedCard.png);
+    padding: 64px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    border-color: none;
+    border: 3px solid #0F0D11;
+}
+
+.curso:hover{
+    border-color: var(--color-rocket);
+    transition: 0.3s;
+    top: -6px;
+}
+
+.curso#launchbase:hover{
+    border-color: var(--color-org);
+}
+
+.curso#gostack:hover{
+    border-color: var(--color-green)
+}
+
+
+.curso h3{
+    border: 2px solid rgb(113, 89, 193);
+    color: rgb(113, 89, 193);
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    justify-content: center;
+    width: 47px;
+    height: 47px;
+    margin: 0 auto;
+}
+
+b{
+    color: var(--color-rocket);
+}
+
+#launchbase b{
+    color: var(--color-org);
+}
+
+#gostack b{
+    color: var(--color-green);
+}
+
+.curso h2{
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(135, 134, 139);
+    text-align: center;
+    max-width: 270px; 
+    font-family: "Roboto";
+
+}
+
+.curso img{
+    margin: 100px auto;
+    display: block;
+
+}
+
+h3#launchbase{
+    color: var(--color-org);
+    border-color: var(--color-org);
+}
+
+h3#gostack{
+    color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.modalCursos-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modalCursos-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalCursos{
+    background-color: rgb(15, 15, 15);
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.close-modalCursos{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
 }

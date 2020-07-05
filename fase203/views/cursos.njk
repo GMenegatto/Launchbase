@@ -1,0 +1,41 @@
+{%extends "layout.njk"%}
+
+{%block content%}
+
+        <div class="cursos">
+            <div class="curso" id="starter">
+                <h3>01</h3>
+                <img src="img/Starter.svg" alt="">
+                <h2><b>Torne-se um programador desejado</b> no mercado com esses cursos gratuitos</h2>
+            </div>
+
+
+
+            <div class="curso" id="launchbase">
+                <h3 id="launchbase">02</h3>
+                <img src="img/LaunchBase.svg" alt="">
+                <h2><b>Domine programação do zero</b> e tenha acesso às melhores oportunidades do mercado</h2>
+            </div>
+
+            <div class="curso" id="gostack">
+                <h3 id="gostack">03</h3>
+                <img src="img/GoStack.svg" alt="">
+                <h2><b>Treinamento imersivo</b> nas tecnologias mais modernas de desenvolvimento web e mobile</h2>
+            </div>
+        </div>
+
+        <div class="modalCursos-overlay">
+            <div class="modalCursos">
+                <a class="close-modalCursos">
+                    <i class="material-icons">close</i>
+                </a>
+
+                <div class="modalCursos-content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <script src="cursos.js"></script>
+
+{%endblock%}}
