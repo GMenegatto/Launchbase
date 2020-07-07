@@ -3,15 +3,16 @@
 {% block content %}
 
         <div id="wrapper">
-            <img src="https://avatars1.githubusercontent.com/u/48417528?s=460&u=28e1c7a4892d6f194dd961f38adaa277a9d62835&v=4" alt="Gabriel Menegatto">
-            <h1>Gabriel Menegatto</h1>
-            <h2>Web Developer</h2>
-            <p>Estudante de programação rumo ao desenvolvimento Full Stack</a></p>
+            <img src={{data.avatarUrl}} alt="Gabriel Menegatto">
+            <h1>{{data.username}}</h1>
+            <h2>{{data.subName}}</h2>
+            <p>{{data.userDesc}}</a></p>
         </div>
 
         <div id="links-footer" class="links">
-            <a href="https://github.com/GMenegatto/" target="_blank">Github</a>
-            <a href="https://www.linkedin.com/in/gmenegatto/" target="_blank">Linkedin</a>
+            {%for link in data.link%}
+                <a href={{link.url}} target="_blank">{{link.name}}</a>
+            {%endfor%}
         </div>
 
 {% endblock %}

@@ -1,0 +1,85 @@
+{%extends 'layout.njk'%}
+
+{%block section%}
+
+    <!-- INICIO MAIN -->
+    <main>
+      <div class='container'>
+        <!-- INICIO MELHORES RECEITAS -->
+        <section>
+          <div class='melhores-receitas'>
+              <div class="melhores-receitas__texto">
+                <span>
+                  <h2>As Melhores Receitas</h2>
+                  <p class="tagline">
+                    Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.
+                  </p>
+                </span>
+              </div><!-- /melhores-receitas__texto -->
+
+              <div class="melhores-receitas__chefe">
+                <img class="img-fluid" src="chefe.png" alt="Chefe">
+              </div>
+          </div><!-- /melhores-receitas -->
+        </section>
+        <!-- FIM MELHORES RECEITAS -->
+
+        <!-- INICIO MAIS ACESSADAS -->
+        <section>
+          <div class='mais-acessadas'>
+            <h2>Mais Acessadas</h2>
+
+            <div class='row'>
+
+              {%for card in data%}
+
+              <div id="{{card.id}}" class="mais-acessadas__card">
+                <div class="thumbnail">
+                  <img src={{card.image}} alt="{{card.title}}" />
+                </div><!-- /thumbnail -->
+
+                <p class="nome">{{card.title}}</p>
+                <p class="autor">{{card.author}}</p>
+              </div><!-- /mais-acessadas__card  -->
+
+              {%endfor%}
+
+             
+
+            </div><!-- /row -->
+          </div><!-- /mais-acessadas -->
+        </section>
+        <!-- FIM MAIS ACESSADAS -->
+      </div><!-- /container -->
+
+      <div class="modal-overlay">
+        <div class="modal-content">
+          <div class="thumbnail">
+            <img src="" alt="lanche" />
+          </div><!-- /thumbnail -->
+          
+          <div class="conteudo-modal">
+            <p class="nome">Triplo Burger Bacon</p>
+            <p class="autor">por Luís Felipe</p>
+          </div>
+          
+
+          <div class="modal-close">
+            <p>Fechar Modal</p>
+          </div>
+
+          
+        </div><!-- /modal-content -->
+      </div><!-- /modal-overlay -->
+    </main>
+    <!-- FIM MAIN -->
+
+    <!-- INICIO FOOTER -->
+    <footer>
+      <p>Gabriel Menegatto</p>
+    </footer>
+    <!-- FIM FOOTER -->
+
+    <script src="script.js"></script>
+
+    {%endblock%}
